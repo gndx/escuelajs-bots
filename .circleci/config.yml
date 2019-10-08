@@ -15,5 +15,5 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-      - run: eslint src/
+      - run: yarn lint
       - run: yarn build
