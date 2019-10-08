@@ -35,7 +35,7 @@ jobs:
       - run: yarn lint
 workflows:
   version: 2
-  test_and_build
+  test_and_build:
     jobs:
       - build
       - eslint
