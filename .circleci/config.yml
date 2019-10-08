@@ -16,7 +16,9 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-      - run: yarn lint
+      - run:
+          name: "ESLint Test - #escuelajs"
+          command: yarn lint
   build:
     docker:
       - image: circleci/node:10
@@ -32,7 +34,9 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-      - run: yarn build
+      - run:
+          name: "Compilar Proyecto - #escuelajs"
+          command: yarn build
 workflows:
   version: 2
   test_and_build:
