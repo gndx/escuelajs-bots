@@ -17,4 +17,9 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: yarn build
   eslint:
+    docker:
+      - image: circleci/node:10
+    working_directory: ~/repo
+    steps:
+    - run: yarn install
     - run: yarn lint
