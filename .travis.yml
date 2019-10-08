@@ -1,7 +1,13 @@
 language: node_js
-node_js: 9.2.1
+node_js: 9
 sudo: false
 install:
   - npm install
-script:
-  - npm run build
+jobs:
+  include:
+    - stage: "ESlint"                # naming the Tests stage
+      name: "Correr pruebas ESLint"            # names the first Tests stage job
+      script: npm run lint
+    - stage: Build
+      name: "Generar compilado"
+      script: npm run build
