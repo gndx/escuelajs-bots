@@ -40,4 +40,4 @@ workflows:
       - eslint
       - build
           requires:
-          - eslint
+            - eslint
