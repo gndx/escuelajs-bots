@@ -38,6 +38,6 @@ workflows:
   test_and_build:
     jobs:
       - eslint
-      - build
+      - build:
           requires:
             - eslint
