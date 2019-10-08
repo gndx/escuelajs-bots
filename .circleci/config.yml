@@ -4,7 +4,6 @@ jobs:
     docker:
       - image: circleci/node:10
     working_directory: ~/repo
-    parallelism: 4
     steps:
       - checkout
       - checkout
@@ -22,7 +21,6 @@ jobs:
     docker:
       - image: circleci/node:10
     working_directory: ~/repo
-    parallelism: 4
     steps:
       - checkout
       - restore_cache:
